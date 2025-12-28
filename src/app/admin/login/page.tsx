@@ -1,8 +1,8 @@
 'use client';
-
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { signIn } from 'next-auth/react';
 
 export default function AdminLoginPage() {
     const router = useRouter();
@@ -18,16 +18,26 @@ export default function AdminLoginPage() {
         setError('');
         setIsLoading(true);
 
-        // 模拟登录（后续会连接真实认证）
-        setTimeout(() => {
-            if (formData.email === 'admin@gokart.com' && formData.password === 'admin123') {
-                // 登录成功，跳转到仪表板
-                router.push('/admin/dashboard');
-            } else {
-                setError('邮箱或密码错误');
+        try {
+            const result = await signIn('credentials', {
+                email: formData.email,
+                password: formData.password,
+                redirect: false,
+            });
+
+            if (result?.error) {
+                setError('认证失败：' + (result.error === 'CredentialsSignin' ? '邮箱或密码错误' : result.error));
                 setIsLoading(false);
+            } else {
+                // Login successful
+                router.push('/admin/dashboard');
+                router.refresh(); // Ensure layout updates
             }
-        }, 1000);
+        } catch (err) {
+            console.error('Login error:', err);
+            setError('发生未知错误，请重试');
+            setIsLoading(false);
+        }
     };
 
     return (
@@ -76,7 +86,7 @@ export default function AdminLoginPage() {
                                 value={formData.email}
                                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                 className="w-full px-4 py-3 bg-muted/50 border border-border/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all text-foreground placeholder:text-muted-foreground"
-                                placeholder="admin@gokart.com"
+                                placeholder="your@email.com"
                             />
                         </div>
 
@@ -122,13 +132,6 @@ export default function AdminLoginPage() {
                             )}
                         </button>
                     </form>
-
-                    {/* Demo Credentials */}
-                    <div className="mt-6 p-4 bg-primary/5 border border-primary/20 rounded-lg">
-                        <p className="text-xs text-muted-foreground mb-2">🔑 演示账号：</p>
-                        <p className="text-sm font-mono text-primary">admin@gokart.com</p>
-                        <p className="text-sm font-mono text-primary">admin123</p>
-                    </div>
                 </div>
             </div>
         </div>

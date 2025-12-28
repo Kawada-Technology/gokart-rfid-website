@@ -1,89 +1,42 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
+import { getSeoMetadata } from '@/lib/seo';
+import { GoKartIllustration, RFIDSystemIllustration, LinkedInIcon, SendIcon } from '@/components/Icons';
 
-export const metadata: Metadata = {
-    title: '关于项目 | GoKart RFID',
-    description: '了解 GoKart RFID 圈速系统的开发背景、技术架构和团队信息',
-};
+export async function generateMetadata(): Promise<Metadata> {
+    const t = await getTranslations('AboutPage.metadata');
+    return getSeoMetadata('about', {
+        title: t('title'),
+        description: t('description'),
+    });
+}
 
-export default function AboutPage() {
-    const timeline = [
-        {
-            date: '2024年12月27日',
-            title: '项目重构',
-            description: '对原有代码进行全面重构，建立清晰的架构和配置系统',
-        },
-        {
-            date: '2024年12月25日',
-            title: 'SDK 升级',
-            description: '升级 CF-815 SDK 到最新版本，优化通信协议，提升读取稳定性和响应速度',
-        },
-        {
-            date: '2024年10月',
-            title: '功能完善',
-            description: '添加音频反馈、SQLite存储和会话管理功能',
-        },
-        {
-            date: '2024年8月',
-            title: '防抖优化',
-            description: '实现5秒防重复算法，解决高速场景下的误读问题',
-        },
-        {
-            date: '2024年6月',
-            title: '项目启动',
-            description: '基于 CF-815 读卡器开发首个卡丁车圈速计数原型',
-        },
-    ];
+export default async function AboutPage() {
+    const t = await getTranslations('AboutPage');
 
-    const techStack = [
-        {
-            category: '前端开发',
-            items: ['C# WinForms', '.NET Framework 3.5', 'GDI+ 图形库'],
-        },
-        {
-            category: '硬件通信',
-            items: ['CF-815 SDK', 'USB-Serial (CP210x)', 'UHF RFID 协议'],
-        },
-        {
-            category: '数据存储',
-            items: ['SQLite 3', 'ADO.NET', 'Entity Framework'],
-        },
-        {
-            category: '开发工具',
-            items: ['Visual Studio 2022', 'Git', 'GitHub'],
-        },
-    ];
-
-    const contributors = [
-        {
-            name: 'Kawada',
-            role: '项目发起人 & 核心开发',
-            avatar: '👨‍💻',
-            description: '负责整体架构设计、硬件集成和核心算法开发',
-        },
-        {
-            name: 'Antigravity AI',
-            role: '技术顾问 & 代码重构',
-            avatar: '🤖',
-            description: '协助项目重构、文档编写和最佳实践指导',
-        },
-    ];
+    const timelineItems = [0, 1, 2, 3, 4]; // Assuming 5 items
+    const techCategories = ['frontend', 'hardware', 'database', 'tools'];
+    const teamMembers = ['kawada', 'antigravity'];
 
     return (
         <div className="min-h-screen pt-16">
             {/* Hero Section */}
             <section className="section-container">
-                <div className="text-center max-w-4xl mx-auto mb-16">
+                <div className="text-center max-w-4xl mx-auto mb-10">
                     <div className="inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/30 mb-6">
-                        <span className="text-sm font-medium text-primary">关于我们</span>
+                        <span className="text-sm font-medium text-primary">{t('hero.badge')}</span>
                     </div>
-                    <h1 className="mb-6">
-                        <span className="gradient-text">专业RFID技术服务提供商</span>
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                        <span className="gradient-text">{t('hero.title')}</span>
                     </h1>
                     <p className="text-xl text-muted-foreground leading-relaxed">
-                        我们专注于RFID技术的商业化应用与定制开发，
-                        为各行业客户提供从咨询、开发、部署到维护的一站式解决方案。
+                        {t('hero.description')}
                     </p>
+                    {/* GoKart Illustration */}
+                    <div className="mt-10">
+                        <GoKartIllustration className="w-full max-w-md mx-auto h-24 text-primary" />
+                    </div>
                 </div>
             </section>
 
@@ -92,21 +45,21 @@ export default function AboutPage() {
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     <div>
                         <h2 className="text-3xl font-bold mb-6">
-                            <span className="gradient-text">项目起源</span>
+                            <span className="gradient-text">{t('projectStory.title')}</span>
                         </h2>
                         <div className="space-y-4 text-muted-foreground leading-relaxed">
                             <p>
-                                在卡丁车赛事中，传统的手动计时方式容易出错且效率低下。
-                                为了解决这个问题，我们基于 <span className="text-primary font-semibold">CF-815 UHF RFID 读卡器</span> 开发了这套自动化计时系统。
+                                {t.rich('projectStory.content.p1', {
+                                    primary: (chunks) => <span className="text-primary font-semibold">{chunks}</span>
+                                })}
                             </p>
                             <p>
-                                系统通过 RFID 技术自动识别经过终点线的卡丁车，
-                                配合精心设计的 <span className="text-secondary font-semibold">5秒防抖算法</span>，
-                                确保在高速场景下依然能够准确计数每一圈。
+                                {t.rich('projectStory.content.p2', {
+                                    secondary: (chunks) => <span className="text-secondary font-semibold">{chunks}</span>
+                                })}
                             </p>
                             <p>
-                                经过多次迭代和实际测试，系统已经能够稳定支持 20 辆卡丁车同时比赛，
-                                并提供实时可视化、音频反馈和完整的数据记录功能。
+                                {t('projectStory.content.p3')}
                             </p>
                         </div>
                     </div>
@@ -115,20 +68,20 @@ export default function AboutPage() {
                         <div className="space-y-6">
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="text-center p-4 bg-muted/30 rounded-xl">
-                                    <div className="text-4xl font-bold text-primary mb-1">20</div>
-                                    <div className="text-sm text-muted-foreground">支持卡丁车</div>
+                                    <div className="text-4xl font-bold text-primary mb-1">{t('projectStory.stats.karts.value')}</div>
+                                    <div className="text-sm text-muted-foreground">{t('projectStory.stats.karts.label')}</div>
                                 </div>
                                 <div className="text-center p-4 bg-muted/30 rounded-xl">
-                                    <div className="text-4xl font-bold text-secondary mb-1">8-10m</div>
-                                    <div className="text-sm text-muted-foreground">读取距离</div>
+                                    <div className="text-4xl font-bold text-secondary mb-1">{t('projectStory.stats.range.value')}</div>
+                                    <div className="text-sm text-muted-foreground">{t('projectStory.stats.range.label')}</div>
                                 </div>
                                 <div className="text-center p-4 bg-muted/30 rounded-xl">
-                                    <div className="text-4xl font-bold text-primary mb-1">5s</div>
-                                    <div className="text-sm text-muted-foreground">防抖间隔</div>
+                                    <div className="text-4xl font-bold text-primary mb-1">{t('projectStory.stats.interval.value')}</div>
+                                    <div className="text-sm text-muted-foreground">{t('projectStory.stats.interval.label')}</div>
                                 </div>
                                 <div className="text-center p-4 bg-muted/30 rounded-xl">
-                                    <div className="text-4xl font-bold text-secondary mb-1">1080P</div>
-                                    <div className="text-sm text-muted-foreground">UI优化</div>
+                                    <div className="text-4xl font-bold text-secondary mb-1">{t('projectStory.stats.ui.value')}</div>
+                                    <div className="text-sm text-muted-foreground">{t('projectStory.stats.ui.label')}</div>
                                 </div>
                             </div>
                         </div>
@@ -138,23 +91,23 @@ export default function AboutPage() {
 
             {/* Timeline */}
             <section className="section-container">
-                <h2 className="text-3xl font-bold mb-12 text-center">
-                    <span className="gradient-text">开发历程</span>
+                <h2 className="text-3xl font-bold mb-8 text-center">
+                    <span className="gradient-text">{t('timeline.title')}</span>
                 </h2>
                 <div className="max-w-3xl mx-auto">
                     <div className="space-y-8">
-                        {timeline.map((item, index) => (
+                        {timelineItems.map((_, index) => (
                             <div key={index} className="flex gap-6 group">
                                 <div className="flex flex-col items-center">
                                     <div className="w-4 h-4 rounded-full bg-primary group-hover:scale-125 transition-transform" />
-                                    {index !== timeline.length - 1 && (
+                                    {index !== timelineItems.length - 1 && (
                                         <div className="w-0.5 h-full bg-border/50 mt-2" />
                                     )}
                                 </div>
                                 <div className="flex-1 pb-8">
-                                    <div className="text-sm text-primary font-semibold mb-1">{item.date}</div>
-                                    <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                                    <p className="text-muted-foreground">{item.description}</p>
+                                    <div className="text-sm text-primary font-semibold mb-1">{t(`timeline.items.${index}.date`)}</div>
+                                    <h3 className="text-xl font-bold mb-2">{t(`timeline.items.${index}.title`)}</h3>
+                                    <p className="text-muted-foreground">{t(`timeline.items.${index}.description`)}</p>
                                 </div>
                             </div>
                         ))}
@@ -164,18 +117,18 @@ export default function AboutPage() {
 
             {/* Tech Stack */}
             <section className="section-container">
-                <h2 className="text-3xl font-bold mb-12 text-center">
-                    <span className="gradient-text">技术栈</span>
+                <h2 className="text-3xl font-bold mb-8 text-center">
+                    <span className="gradient-text">{t('techStack.title')}</span>
                 </h2>
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {techStack.map((stack, index) => (
+                    {techCategories.map((category, index) => (
                         <div key={index} className="glass-card p-6">
-                            <h3 className="font-bold text-lg mb-4 text-primary">{stack.category}</h3>
+                            <h3 className="font-bold text-lg mb-4 text-primary">{t(`techStack.categories.${category}.title`)}</h3>
                             <ul className="space-y-2">
-                                {stack.items.map((item, i) => (
+                                {[0, 1, 2].map((i) => (
                                     <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
                                         <span className="text-primary mt-0.5">▸</span>
-                                        <span>{item}</span>
+                                        <span>{t(`techStack.categories.${category}.items.${i}`)}</span>
                                     </li>
                                 ))}
                             </ul>
@@ -186,17 +139,19 @@ export default function AboutPage() {
 
             {/* Team */}
             <section className="section-container">
-                <h2 className="text-3xl font-bold mb-12 text-center">
-                    <span className="gradient-text">团队成员</span>
+                <h2 className="text-3xl font-bold mb-8 text-center">
+                    <span className="gradient-text">{t('team.title')}</span>
                 </h2>
                 <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    {contributors.map((member, index) => (
-                        <div key={index} className="glass-card p-8 text-center hover-lift">
-                            <div className="text-6xl mb-4">{member.avatar}</div>
-                            <h3 className="text-2xl font-bold mb-2">{member.name}</h3>
-                            <div className="text-primary font-semibold mb-4">{member.role}</div>
+                    {teamMembers.map((member, index) => (
+                        <div key={index} className="glass-card p-8 text-center hover-lift flex flex-col items-center">
+                            <div className="mb-4 text-primary">
+                                {member === 'kawada' ? <UserIcon className="w-16 h-16" /> : <RobotIcon className="w-16 h-16" />}
+                            </div>
+                            <h3 className="text-2xl font-bold mb-2">{t(`team.members.${member}.name`)}</h3>
+                            <div className="text-primary font-semibold mb-4">{t(`team.members.${member}.role`)}</div>
                             <p className="text-muted-foreground text-sm leading-relaxed">
-                                {member.description}
+                                {t(`team.members.${member}.description`)}
                             </p>
                         </div>
                     ))}
@@ -208,47 +163,108 @@ export default function AboutPage() {
                 <div className="glass-card p-12 text-center relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10" />
                     <div className="relative z-10">
-                        <div className="text-6xl mb-6">📦</div>
-                        <h2 className="mb-4">100% 开源项目</h2>
+                        <div className="flex justify-center mb-6">
+                            <PackageIcon className="w-16 h-16 text-primary" />
+                        </div>
+                        <h2 className="mb-4">{t('openSource.title')}</h2>
                         <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                            我们相信开源的力量。GoKart RFID 的所有代码都在 GitHub 上公开，
-                            欢迎贡献代码、提出建议或报告问题。
+                            {t('openSource.description')}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <a
                                 href="https://github.com/yuji4091/GoKartRFID"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="btn-primary"
+                                className="btn-primary flex items-center justify-center gap-2"
                             >
-                                ⭐ Star on GitHub
+                                <StarIcon className="w-5 h-5" />
+                                {t('openSource.star')}
                             </a>
-                            <Link href="/blog" className="btn-outline">
-                                📖 阅读技术博客
+                            <Link href="/blog" className="btn-outline flex items-center justify-center gap-2">
+                                <BookIcon className="w-5 h-5" />
+                                {t('openSource.blog')}
                             </Link>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Contact */}
-            <section className="section-container">
-                <div className="glass-card p-8 max-w-2xl mx-auto">
-                    <h3 className="text-2xl font-bold mb-6 text-center">联系我们</h3>
-                    <div className="grid md:grid-cols-2 gap-6">
-                        <div className="text-center p-4">
-                            <div className="text-3xl mb-2">💬</div>
-                            <h4 className="font-semibold mb-2">技术交流</h4>
-                            <p className="text-sm text-muted-foreground">
-                                通过 GitHub Issues 讨论技术问题
+            {/* Contact Form */}
+            <section id="contact" className="section-container">
+                <div className="glass-card p-8 max-w-4xl mx-auto">
+                    <div className="grid md:grid-cols-2 gap-8">
+                        {/* Left: Contact Info */}
+                        <div className="space-y-6">
+                            <h3 className="text-2xl font-bold">
+                                <span className="gradient-text">{t('contact.title')}</span>
+                            </h3>
+                            <p className="text-muted-foreground">
+                                {t('contact.description')}
                             </p>
+
+                            <div className="space-y-4">
+                                <div className="flex items-center gap-3">
+                                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                                        <MailIcon className="w-5 h-5 text-primary" />
+                                    </div>
+                                    <div>
+                                        <div className="text-sm text-muted-foreground">{t('contact.business.title')}</div>
+                                        <div className="font-medium">admin@kawadaai.studio</div>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-center gap-3">
+                                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                                        <ChatIcon className="w-5 h-5 text-primary" />
+                                    </div>
+                                    <div>
+                                        <div className="text-sm text-muted-foreground">{t('contact.tech.title')}</div>
+                                        <div className="font-medium">GitHub Issues</div>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-center gap-3">
+                                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                                        <LinkedInIcon className="w-5 h-5 text-primary" />
+                                    </div>
+                                    <div>
+                                        <div className="text-sm text-muted-foreground">LinkedIn</div>
+                                        <a href="https://www.linkedin.com/in/kawadaitsolution/" target="_blank" rel="noopener noreferrer" className="font-medium text-primary hover:underline">@kawadaitsolution</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div className="text-center p-4">
-                            <div className="text-3xl mb-2">📧</div>
-                            <h4 className="font-semibold mb-2">商务合作</h4>
-                            <p className="text-sm text-muted-foreground">
-                                contact@gokart-rfid.com
-                            </p>
+
+                        {/* Right: Contact Form */}
+                        <div className="space-y-4">
+                            <div>
+                                <label className="block text-sm font-medium mb-2">{t('contact.form.name')}</label>
+                                <input
+                                    type="text"
+                                    className="w-full px-4 py-3 rounded-lg bg-muted/50 border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors"
+                                    placeholder={t('contact.form.namePlaceholder')}
+                                />
+                            </div>
+                            <div>
+                                <label className="block text-sm font-medium mb-2">{t('contact.form.email')}</label>
+                                <input
+                                    type="email"
+                                    className="w-full px-4 py-3 rounded-lg bg-muted/50 border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors"
+                                    placeholder={t('contact.form.emailPlaceholder')}
+                                />
+                            </div>
+                            <div>
+                                <label className="block text-sm font-medium mb-2">{t('contact.form.message')}</label>
+                                <textarea
+                                    rows={4}
+                                    className="w-full px-4 py-3 rounded-lg bg-muted/50 border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors resize-none"
+                                    placeholder={t('contact.form.messagePlaceholder')}
+                                />
+                            </div>
+                            <button className="w-full btn-primary flex items-center justify-center gap-2">
+                                <SendIcon className="w-5 h-5" />
+                                {t('contact.form.submit')}
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -256,3 +272,46 @@ export default function AboutPage() {
         </div>
     );
 }
+
+// Icon Components
+const UserIcon = ({ className }: { className?: string }) => (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+    </svg>
+);
+
+const RobotIcon = ({ className }: { className?: string }) => (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+    </svg>
+);
+
+const PackageIcon = ({ className }: { className?: string }) => (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+    </svg>
+);
+
+const StarIcon = ({ className }: { className?: string }) => (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+    </svg>
+);
+
+const BookIcon = ({ className }: { className?: string }) => (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+    </svg>
+);
+
+const ChatIcon = ({ className }: { className?: string }) => (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+    </svg>
+);
+
+const MailIcon = ({ className }: { className?: string }) => (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+    </svg>
+);

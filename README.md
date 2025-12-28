@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GoKart RFID Website
 
-## Getting Started
+高性能多语言 RFID 卡丁车计时系统官网，基于 Next.js 16 + Prisma + PostgreSQL 构建。
 
-First, run the development server:
+## 🚀 功能特性
+
+- **多语言支持**：中文、英文、马来语、泰米尔语
+- **博客系统**：Markdown 编辑、分类标签、多语言文章
+- **管理后台**：卡丁车管理、圈速记录、SEO 配置
+- **响应式设计**：现代化 UI，支持深色模式
+- **数据库集成**：Prisma ORM + PostgreSQL
+
+## 📦 技术栈
+
+- **框架**: Next.js 16.1.1 (Turbopack)
+- **语言**: TypeScript 5
+- **样式**: Tailwind CSS 4
+- **数据库**: PostgreSQL + Prisma 5
+- **认证**: NextAuth.js
+- **国际化**: next-intl
+- **部署**: Vercel
+
+## 🛠️ 本地开发
+
+### 1. 安装依赖
+
+```bash
+npm install
+```
+
+### 2. 配置环境变量
+
+复制 `.env.example` 为 `.env`：
+
+```bash
+cp .env.example .env
+```
+
+然后编辑 `.env` 填入真实配置：
+
+```env
+DATABASE_URL="postgresql://user:password@host:5432/dbname"
+NEXTAUTH_SECRET="your-generated-secret"
+NEXTAUTH_URL="http://localhost:3000"
+```
+
+### 3. 初始化数据库
+
+```bash
+npx prisma migrate dev
+npx prisma db seed
+```
+
+### 4. 启动开发服务器
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+访问 http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📝 数据库模型
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Kart**: 卡丁车信息 (AA01-AA20)
+- **Lap**: 圈速记录
+- **BlogPost**: 多语言博客文章
+- **SeoConfig**: SEO 配置
+- **User**: 管理员用户
 
-## Learn More
+## 🌐 部署到 Vercel
 
-To learn more about Next.js, take a look at the following resources:
+### 一键部署
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/YOUR_USERNAME/gokart-rfid-website)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 手动部署
 
-## Deploy on Vercel
+1. 推送代码到 GitHub
+2. 在 Vercel 导入项目
+3. 配置环境变量（DATABASE_URL, NEXTAUTH_SECRET, NEXTAUTH_URL）
+4. 部署完成！
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📄 许可证
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT License
+
+## 👨‍💻 作者
+
+Ken Chan - [Kawada Technology](https://kawadaai.studio)
+
+---
+
+⭐ 如果这个项目对您有帮助，请给个 Star！

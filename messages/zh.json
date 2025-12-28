@@ -1,0 +1,582 @@
+{
+    "Navigation": {
+        "home": "首页",
+        "services": "服务",
+        "features": "功能",
+        "blog": "博客",
+        "about": "关于",
+        "brand": "Kawada GoKart RFID"
+    },
+    "HomePage": {
+        "title": "Kawada GoKart RFID",
+        "subtitle": "圈速计数系统",
+        "badge": "高精度 RFID 赛车系统",
+        "description": "基于 <primary>CF-815 四端口 UHF RFID 读卡器</primary>（860-960MHz，读取距离 8-10米）的高精度圈速计数系统。为卡丁车赛事提供 <secondary>10秒防抖</secondary>、<secondary>实时可视化</secondary>、<secondary>音频反馈</secondary> 的自动化解决方案。",
+        "getQuote": "获取定制方案",
+        "viewDemo": "查看功能演示",
+        "viewGithub": "查看 GitHub 源码",
+        "featuresTitle": "核心特性",
+        "featuresSubtitle": "专为高速卡丁车赛事设计的智能 RFID 系统",
+        "stats": {
+            "posts": "发布的博客文章",
+            "views": "总浏览量",
+            "karts": "支持的卡丁车数量",
+            "baudRate": "波特率 (bps)"
+        },
+        "cta": {
+            "title": "准备好开始了吗？",
+            "description": "立即下载并部署 GoKart RFID 系统，为你的赛事带来专业级的圈速统计体验",
+            "download": "下载最新版本",
+            "blog": "阅读技术博客"
+        },
+        "features": {
+            "autoLap": {
+                "title": "自动圈速计数",
+                "description": "基于 UHF RFID 技术的高精度识别，配合 5 秒防重复保护算法，确保每一圈都准确无误。"
+            },
+            "visualDashboard": {
+                "title": "可视化仪表板",
+                "description": "1080P 全屏优化界面，色彩编码状态显示（运行中/最后一圈/完成/未激活），一目了然。"
+            },
+            "audioFeedback": {
+                "title": "音频反馈",
+                "description": "每圈独特的提示音，完成全程后播放胜利音效序列，提升比赛体验感。"
+            },
+            "realtimeLog": {
+                "title": "实时日志",
+                "description": "色彩编码的事件日志系统，清晰区分原始数据、圈数记录和错误信息。"
+            },
+            "sessionControl": {
+                "title": "会话控制",
+                "description": "支持单独为每辆卡丁车手动启动和重置会话，灵活应对各种比赛场景。"
+            },
+            "sqliteStorage": {
+                "title": "SQLite 存储",
+                "description": "本地数据库存储圈速时间，支持历史数据查询和统计分析。"
+            }
+        },
+        "preview": {
+            "windowTitle": "GoKart RFID - 圈速计数",
+            "logTitle": "实时事件日志",
+            "kartsSupported": "支持卡丁车",
+            "antiShakeInterval": "防抖间隔",
+            "logs": {
+                "finished": "完成",
+                "finalLap": "最后一圈",
+                "finishedAll": "完成全部圈数!"
+            }
+        }
+    },
+    "AboutPage": {
+        "metadata": {
+            "title": "关于项目 | GoKart RFID",
+            "description": "了解 GoKart RFID 圈速系统的开发背景、技术架构和团队信息"
+        },
+        "hero": {
+            "badge": "关于我们",
+            "title": "专业RFID技术服务提供商",
+            "description": "我们专注于RFID技术的商业化应用与定制开发，为各行业客户提供从咨询、开发、部署到维护的一站式解决方案。"
+        },
+        "projectStory": {
+            "title": "项目起源",
+            "content": {
+                "p1": "在卡丁车赛事中，传统的手动计时方式容易出错且效率低下。为了解决这个问题，我们基于 <primary>CF-815 UHF RFID 读卡器</primary> 开发了这套自动化计时系统。",
+                "p2": "系统通过 RFID 技术自动识别经过终点线的卡丁车，配合精心设计的 <secondary>10秒防抖算法</secondary>，确保在高速场景下依然能够准确计数每一圈。",
+                "p3": "经过多次迭代和实际测试，系统已经能够稳定支持 20 辆卡丁车同时比赛，并提供实时可视化、音频反馈和完整的数据记录功能。"
+            },
+            "stats": {
+                "karts": {
+                    "value": "20",
+                    "label": "支持卡丁车"
+                },
+                "range": {
+                    "value": "8-10m",
+                    "label": "读取距离"
+                },
+                "interval": {
+                    "value": "10s",
+                    "label": "防抖间隔"
+                },
+                "ui": {
+                    "value": "1080P",
+                    "label": "UI优化"
+                }
+            }
+        },
+        "timeline": {
+            "title": "开发历程",
+            "items": [
+                {
+                    "date": "2024年12月27日",
+                    "title": "项目重构",
+                    "description": "对原有代码进行全面重构，建立清晰的架构和配置系统"
+                },
+                {
+                    "date": "2024年12月25日",
+                    "title": "SDK 升级",
+                    "description": "升级 CF-815 SDK 到最新版本，优化通信协议，提升读取稳定性和响应速度"
+                },
+                {
+                    "date": "2024年10月",
+                    "title": "功能完善",
+                    "description": "添加音频反馈、SQLite存储和会话管理功能"
+                },
+                {
+                    "date": "2024年8月",
+                    "title": "防抖优化",
+                    "description": "实现10秒防重复算法，解决高速场景下的误读问题"
+                },
+                {
+                    "date": "2024年6月",
+                    "title": "项目启动",
+                    "description": "基于 CF-815 读卡器开发首个卡丁车圈速计数原型"
+                }
+            ]
+        },
+        "techStack": {
+            "title": "技术栈",
+            "categories": {
+                "frontend": {
+                    "title": "前端开发",
+                    "items": [
+                        "C# WinForms",
+                        ".NET Framework 3.5",
+                        "GDI+ 图形库"
+                    ]
+                },
+                "hardware": {
+                    "title": "硬件通信",
+                    "items": [
+                        "CF-815 SDK",
+                        "USB-Serial (CP210x)",
+                        "UHF RFID 协议"
+                    ]
+                },
+                "database": {
+                    "title": "数据存储",
+                    "items": [
+                        "SQLite 3",
+                        "ADO.NET",
+                        "Entity Framework"
+                    ]
+                },
+                "tools": {
+                    "title": "开发工具",
+                    "items": [
+                        "Visual Studio 2022",
+                        "Git",
+                        "GitHub"
+                    ]
+                }
+            }
+        },
+        "team": {
+            "title": "团队成员",
+            "members": {
+                "kawada": {
+                    "name": "Ken Chan",
+                    "role": "项目发起人 & 核心开发",
+                    "description": "负责整体架构设计、硬件集成和核心算法开发"
+                },
+                "antigravity": {
+                    "name": "Kawada Technology",
+                    "role": "技术顾问 & 代码重构",
+                    "description": "协助项目重构、文档编写和最佳实践指导"
+                }
+            }
+        },
+        "openSource": {
+            "title": "100% 开源项目",
+            "description": "我们相信开源的力量。GoKart RFID 的所有代码都在 GitHub 上公开，欢迎贡献代码、提出建议或报告问题。",
+            "star": "在 GitHub 上 Star",
+            "blog": "阅读技术博客"
+        },
+        "contact": {
+            "title": "联系我们",
+            "description": "有任何问题或合作意向？请填写表单或通过以下方式联系我们。",
+            "tech": {
+                "title": "技术交流",
+                "desc": "通过 GitHub Issues 讨论技术问题"
+            },
+            "business": {
+                "title": "商务合作",
+                "email": "admin@kawadaai.studio"
+            },
+            "form": {
+                "name": "姓名",
+                "namePlaceholder": "请输入您的姓名",
+                "email": "邮箱",
+                "emailPlaceholder": "请输入您的邮箱地址",
+                "message": "留言内容",
+                "messagePlaceholder": "请输入您的留言或咨询内容...",
+                "submit": "发送消息"
+            }
+        }
+    },
+    "BlogPage": {
+        "metadata": {
+            "title": "技术博客 | GoKart RFID",
+            "description": "GoKart RFID 项目开发日志、技术教程和 RFID 相关知识分享"
+        },
+        "emptyState": {
+            "title": "暂无博客文章",
+            "message": "管理员尚未发布任何文章。请稍后再来！"
+        },
+        "hero": {
+            "badge": "技术分享 & 开发日志",
+            "title": "GoKart RFID 技术博客",
+            "description": "分享 RFID 开发经验、C# 编程技巧和项目实战心得"
+        },
+        "featured": {
+            "label": "精选文章",
+            "views": "浏览",
+            "readMore": "阅读全文 →"
+        },
+        "postList": {
+            "read": "阅读"
+        },
+        "sidebar": {
+            "categories": "分类",
+            "tags": "热门标签"
+        }
+    },
+    "BlogPost": {
+        "notFound": "文章未找到",
+        "backToList": "返回博客列表",
+        "views": "浏览",
+        "tags": "标签：",
+        "toc": "目录",
+        "relatedPosts": "相关文章"
+    },
+    "BlogCategory": {
+        "title": "分类",
+        "backToBlog": "返回博客",
+        "totalPosts": "共 {count} 篇文章",
+        "empty": "该分类下暂无文章",
+        "allCategories": "所有分类",
+        "read": "阅读"
+    },
+    "FeaturesPage": {
+        "metadata": {
+            "title": "功能特性 | GoKart RFID Lap Counter",
+            "description": "了解 GoKart RFID 圈速系统的所有功能特性：自动计数、实时可视化、音频反馈、数据存储等。"
+        },
+        "hero": {
+            "badge": "完整功能特性",
+            "title": "强大的功能，专业的体验",
+            "description": "GoKart RFID 圈速系统为卡丁车赛事提供全方位的自动化计时解决方案，从硬件识别到数据分析，每个环节都经过精心设计。"
+        },
+        "features": {
+            "items": {
+                "autoLap": {
+                    "title": "自动圈速计数",
+                    "description": "基于 UHF RFID 技术的高精度识别，配合 5 秒防重复保护算法，确保每一圈都准确无误。",
+                    "details": [
+                        "高精度 UHF RFID 识别（860-960MHz）",
+                        "10秒防抖算法防止重复计数",
+                        "支持高速移动标签（最高 120km/h）",
+                        "读取距离 8-10米"
+                    ]
+                },
+                "visualDashboard": {
+                    "title": "可视化仪表板",
+                    "description": "1080P 全屏优化界面，色彩编码状态显示（运行中/最后一圈/完成/未激活），一目了然。",
+                    "details": [
+                        "1080P 全屏优化布局",
+                        "实时状态色彩编码（绿/黄/青/红）",
+                        "20个卡丁车同时显示",
+                        "动态刷新，无延迟"
+                    ]
+                },
+                "audioFeedback": {
+                    "title": "音频反馈",
+                    "description": "每圈独特的提示音，完成全程后播放胜利音效序列，提升比赛体验感。",
+                    "details": [
+                        "每圈通过独特提示音",
+                        "最后一圈警告音",
+                        "完成全程胜利音效",
+                        "可自定义音频文件"
+                    ]
+                },
+                "realtimeLog": {
+                    "title": "实时日志",
+                    "description": "色彩编码的事件日志系统，清晰区分原始数据、圈数记录和错误信息。",
+                    "details": [
+                        "实时事件记录",
+                        "色彩分类（数据/圈数/错误）",
+                        "时间戳精确到毫秒",
+                        "日志导出功能"
+                    ]
+                },
+                "sessionControl": {
+                    "title": "会话控制",
+                    "description": "支持单独为每辆卡丁车手动启动和重置会话，灵活应对各种比赛场景。",
+                    "details": [
+                        "单独启动/重置功能",
+                        "批量操作支持",
+                        "会话状态保护",
+                        "历史记录追溯"
+                    ]
+                },
+                "sqliteStorage": {
+                    "title": "SQLite 存储",
+                    "description": "本地数据库存储圈速时间，支持历史数据查询和统计分析。",
+                    "details": [
+                        "轻量级 SQLite 数据库",
+                        "完整的历史记录",
+                        "数据导出（CSV/Excel）",
+                        "统计分析支持"
+                    ]
+                }
+            }
+        },
+        "techSpecs": {
+            "title": "技术规格",
+            "items": {
+                "hardware": {
+                    "label": "硬件",
+                    "value": "CF-815 四端口 UHF RFID 读卡器"
+                },
+                "frequency": {
+                    "label": "频段",
+                    "value": "860-960MHz（可调）"
+                },
+                "range": {
+                    "label": "读取距离",
+                    "value": "8-10米（高增益天线）"
+                },
+                "capacity": {
+                    "label": "支持卡丁车",
+                    "value": "20辆（AA01-AA20）"
+                },
+                "interval": {
+                    "label": "防重复间隔",
+                    "value": "10秒（可配置）"
+                },
+                "interface": {
+                    "label": "通信接口",
+                    "value": "USB-Serial（CP210x）"
+                },
+                "baudRate": {
+                    "label": "波特率",
+                    "value": "115200 bps"
+                },
+                "database": {
+                    "label": "数据库",
+                    "value": "SQLite 3"
+                },
+                "framework": {
+                    "label": "开发框架",
+                    "value": "C# WinForms + .NET 3.5"
+                },
+                "resolution": {
+                    "label": "UI分辨率",
+                    "value": "1080P 优化"
+                }
+            }
+        },
+        "cta": {
+            "title": "准备好体验了吗？",
+            "description": "下载 GoKart RFID 系统，为你的赛事带来专业级的计时体验",
+            "download": "下载系统",
+            "more": "了解更多"
+        }
+    },
+    "ServicesPage": {
+        "metadata": {
+            "title": "服务与解决方案 | GoKart RFID",
+            "description": "提供专业的RFID技术定制开发、系统集成和技术支持服务"
+        },
+        "hero": {
+            "badge": "专业RFID技术服务",
+            "title": "为您量身定制RFID解决方案",
+            "description": "从需求分析到系统开发，从部署培训到售后支持，<br />提供一站式RFID技术服务，助力您的业务数字化升级"
+        },
+        "services": {
+            "title": "核心服务",
+            "items": {
+                "custom": {
+                    "title": "定制开发服务",
+                    "description": "根据您的业务需求，量身定制RFID计时系统",
+                    "features": [
+                        "需求分析与方案设计",
+                        "界面定制（品牌色、logo、布局）",
+                        "功能扩展（多赛道、多场次、积分系统）",
+                        "数据库迁移与云端同步",
+                        "多语言支持",
+                        "移动端/Web端配套开发"
+                    ],
+                    "price_label": "起步价格",
+                    "price": "面议",
+                    "cta": "获取报价"
+                },
+                "license": {
+                    "title": "软件授权销售",
+                    "description": "购买成熟的GoKart RFID系统完整授权",
+                    "features": [
+                        "完整源代码授权",
+                        "技术文档与部署指南",
+                        "3个月免费技术支持",
+                        "终身版本更新",
+                        "商业使用许可",
+                        "培训与现场安装服务"
+                    ],
+                    "price_label": "起步价格",
+                    "price": "从 ¥12,800 起",
+                    "cta": "立即购买"
+                },
+                "integration": {
+                    "title": "系统集成服务",
+                    "description": "将RFID技术集成到您的现有系统",
+                    "features": [
+                        "多系统对接（ERP、CRM、大屏）",
+                        "API接口开发",
+                        "数据库设计与优化",
+                        "实时数据推送",
+                        "云端部署（AWS/阿里云）",
+                        "性能优化与监控"
+                    ],
+                    "price_label": "起步价格",
+                    "price": "从 ¥8,000 起",
+                    "cta": "咨询方案"
+                },
+                "training": {
+                    "title": "技术培训",
+                    "description": "RFID开发技术培训与技术咨询",
+                    "features": [
+                        "UHF RFID 技术原理",
+                        "CF-815 SDK 二次开发",
+                        "C# WinForms 实战",
+                        "防抖算法设计",
+                        "1对1技术指导",
+                        "提供完整学习资料"
+                    ],
+                    "price_label": "起步价格",
+                    "price": "¥3,800/天",
+                    "cta": "预约培训"
+                }
+            }
+        },
+        "solutions": {
+            "title": "行业解决方案",
+            "items": {
+                "karting": {
+                    "title": "卡丁车赛事计时",
+                    "industry": "娱乐场所",
+                    "description": "为卡丁车场提供全自动圈速计时，支持20辆车同时比赛，实时排行榜显示",
+                    "tags": [
+                        "已部署",
+                        "成熟方案"
+                    ]
+                },
+                "marathon": {
+                    "title": "马拉松赛事管理",
+                    "industry": "体育赛事",
+                    "description": "大规模跑步赛事计时，支持数千人同时参赛，分段计时与成绩查询",
+                    "tags": [
+                        "可定制"
+                    ]
+                },
+                "logistics": {
+                    "title": "仓库物流管理",
+                    "industry": "物流仓储",
+                    "description": "RFID货物追踪系统，实时库存盘点，进出库自动记录",
+                    "tags": [
+                        "可定制"
+                    ]
+                },
+                "parking": {
+                    "title": "智能停车场",
+                    "industry": "物业管理",
+                    "description": "车辆自动识别与计费，无感通行，云端数据管理",
+                    "tags": [
+                        "可定制"
+                    ]
+                },
+                "exhibition": {
+                    "title": "展会签到系统",
+                    "industry": "活动管理",
+                    "description": "参展人员快速签到，实时统计，数据导出与分析",
+                    "tags": [
+                        "可定制"
+                    ]
+                },
+                "asset": {
+                    "title": "资产管理系统",
+                    "industry": "企业管理",
+                    "description": "固定资产RFID标签化管理，防盗追踪，盘点效率提升90%",
+                    "tags": [
+                        "可定制"
+                    ]
+                }
+            }
+        },
+        "cases": {
+            "title": "成功案例",
+            "items": [
+                {
+                    "client": "马来西亚卡丁车场",
+                    "project": "GoKart RFID 计时系统",
+                    "result": "替代人工计时，准确率100%，成本降低60%",
+                    "duration": "2周交付"
+                },
+                {
+                    "client": "马来西亚体育局",
+                    "project": "马拉松RFID计时系统",
+                    "result": "同时支持5000名选手，0误差",
+                    "duration": "1个月交付"
+                },
+                {
+                    "client": "马来西亚物流公司",
+                    "project": "RFID仓储管理系统",
+                    "result": "库存盘点时间从2天缩短到2小时",
+                    "duration": "3个月交付"
+                }
+            ]
+        },
+        "why": {
+            "title": "为什么选择我们",
+            "items": {
+                "fast": {
+                    "title": "快速交付",
+                    "description": "平均2-4周完成开发部署"
+                },
+                "custom": {
+                    "title": "精准定制",
+                    "description": "100%满足您的业务需求"
+                },
+                "cost": {
+                    "title": "性价比高",
+                    "description": "比同行低30%-50%"
+                },
+                "support": {
+                    "title": "售后保障",
+                    "description": "1年免费维护，终身支持"
+                }
+            }
+        },
+        "contact": {
+            "title": "准备开始您的项目？",
+            "description": "立即联系我们，获取免费技术咨询和项目报价",
+            "emailBtn": "发送邮件咨询",
+            "phoneBtn": "电话咨询：+86-138-0013-8000",
+            "wechat": "微信号",
+            "hours": "工作时间",
+            "hoursValue": "周一至周五 9:00-18:00"
+        }
+    },
+    "Footer": {
+        "tagline": "高精度卡丁车圈速计数系统",
+        "copyright": "Kawada GoKart RFID",
+        "adminPanel": "管理后台",
+        "resourcesTitle": "资源",
+        "techStackTitle": "技术栈",
+        "links": {
+            "features": "功能特性",
+            "blog": "技术博客",
+            "about": "关于项目",
+            "github": "GitHub 仓库",
+            "download": "下载最新版"
+        }
+    }
+}

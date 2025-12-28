@@ -1,0 +1,67 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Kart {
+  id         String   @id @default(cuid())
+  tagId      String   @unique // AA01-AA20
+  name       String?  // 卡丁车名称
+  status     String   @default("inactive") // active/inactive
+  color      String?  // 状态颜色
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  laps       Lap[]
+}
+
+model Lap {
+  id         String   @id @default(cuid())
+  kartId     String
+  kart       Kart     @relation(fields: [kartId], references: [id])
+  lapNumber  Int      // 圈数
+  lapTime    Float    // 圈速时间（秒）
+  timestamp  DateTime @default(now())
+  sessionId  String?  // 会话ID
+}
+
+model BlogPost {
+  id           String   @id @default(cuid())
+  title        String
+  slug         String
+  locale       String   @default("zh") // en, zh, ms, ta
+  content      String   
+  excerpt      String?
+  coverImage   String?
+  status       String   @default("draft") // draft/published
+  category     String
+  tags         String[] 
+  viewsCount   Int      @default(0)
+  publishedAt  DateTime?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@unique([slug, locale]) // 每个 slug 可以有多种语言版本
+}
+
+model SeoConfig {
+  id          String   @id @default(cuid())
+  page        String   @unique // 页面路径
+  title       String
+  description String
+  keywords    String?
+  ogImageUrl  String?
+  updatedAt   DateTime @updatedAt
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String   // Hashed
+  name      String?
+  role      String   @default("admin")
+  createdAt DateTime @default(now())
+}

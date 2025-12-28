@@ -1,0 +1,582 @@
+{
+    "Navigation": {
+        "home": "Home",
+        "services": "Services",
+        "features": "Features",
+        "blog": "Blog",
+        "about": "About",
+        "brand": "Kawada GoKart RFID"
+    },
+    "HomePage": {
+        "title": "Kawada GoKart RFID",
+        "subtitle": "Lap Counter System",
+        "badge": "High-Precision RFID Racing System",
+        "description": "High-precision lap counter based on <primary>CF-815 4-Port UHF RFID Reader</primary> (860-960MHz, 8-10m range). Bringing automated <secondary>10s Anti-Shake</secondary>, <secondary>Real-time Viz</secondary>, and <secondary>Audio Feedback</secondary> to karting events.",
+        "getQuote": "Get Custom Solution",
+        "viewDemo": "View Features Demo",
+        "viewGithub": "View GitHub Source",
+        "featuresTitle": "Core Features",
+        "featuresSubtitle": "Smart RFID system designed for high-speed karting events",
+        "stats": {
+            "posts": "Published Posts",
+            "views": "Total Views",
+            "karts": "Supported Karts",
+            "baudRate": "Baud Rate (bps)"
+        },
+        "cta": {
+            "title": "Ready to Start?",
+            "description": "Download and deploy GoKart RFID system now to bring professional lap timing to your races",
+            "download": "Download Latest Version",
+            "blog": "Read Tech Blog"
+        },
+        "features": {
+            "autoLap": {
+                "title": "Auto Lap Counter",
+                "description": "High-precision identification based on UHF RFID, with 10s anti-duplicate protection ensuring 100% accuracy."
+            },
+            "visualDashboard": {
+                "title": "Visual Dashboard",
+                "description": "1080P full-screen optimized interface with color-coded status (Running/Final Lap/Finished/Inactive)."
+            },
+            "audioFeedback": {
+                "title": "Audio Feedback",
+                "description": "Distinct tones for each lap and victory sound sequence upon completion to enhance race experience."
+            },
+            "realtimeLog": {
+                "title": "Real-time Log",
+                "description": "Color-coded event log system distinguishing raw data, lap records, and errors."
+            },
+            "sessionControl": {
+                "title": "Session Control",
+                "description": "Supports manual start/reset for individual karts to handle various race scenarios."
+            },
+            "sqliteStorage": {
+                "title": "SQLite Storage",
+                "description": "Local database storage for lap times, supporting historical queries and statistical analysis."
+            }
+        },
+        "preview": {
+            "windowTitle": "GoKart RFID - Lap Counter",
+            "logTitle": "Real-time Event Log",
+            "kartsSupported": "Supported Karts",
+            "antiShakeInterval": "Anti-Shake",
+            "logs": {
+                "finished": "Finished",
+                "finalLap": "Final Lap",
+                "finishedAll": "Finished All Laps!"
+            }
+        }
+    },
+    "AboutPage": {
+        "metadata": {
+            "title": "About Us | GoKart RFID",
+            "description": "Learn about the development background, technical architecture, and team of the GoKart RFID Lap Counter system."
+        },
+        "hero": {
+            "badge": "About Us",
+            "title": "Professional RFID Solutions Provider",
+            "description": "We specialize in commercial applications and custom development of RFID technology, offering one-stop solutions from consulting and development to deployment and maintenance for clients across various industries."
+        },
+        "projectStory": {
+            "title": "Project Origin",
+            "content": {
+                "p1": "In karting events, traditional manual timing is prone to errors and inefficient. To solve this, we developed this automated timing system based on the <primary>CF-815 UHF RFID Reader</primary>.",
+                "p2": "The system automatically identifies karts crossing the finish line via RFID technology, coupled with a carefully designed <secondary>10-second anti-shake algorithm</secondary>, ensuring accurate counting for every lap even at high speeds.",
+                "p3": "After multiple iterations and field testing, the system creates stable support for 20 concurrent karts, providing real-time visualization, audio feedback, and complete data recording."
+            },
+            "stats": {
+                "karts": {
+                    "value": "20",
+                    "label": "Karts Supported"
+                },
+                "range": {
+                    "value": "8-10m",
+                    "label": "Read Range"
+                },
+                "interval": {
+                    "value": "10s",
+                    "label": "Anti-Shake"
+                },
+                "ui": {
+                    "value": "1080P",
+                    "label": "UI Optimized"
+                }
+            }
+        },
+        "timeline": {
+            "title": "Development Timeline",
+            "items": [
+                {
+                    "date": "Dec 27, 2024",
+                    "title": "Project Refactoring",
+                    "description": "Comprehensive refactoring of the original code, establishing a clear architecture and configuration system."
+                },
+                {
+                    "date": "Dec 25, 2024",
+                    "title": "SDK Upgrade",
+                    "description": "Upgraded CF-815 SDK to the latest version, optimizing communication protocols for improved stability and response speed."
+                },
+                {
+                    "date": "Oct 2024",
+                    "title": "Feature Completion",
+                    "description": "Added audio feedback, SQLite storage, and session management functions."
+                },
+                {
+                    "date": "Aug 2024",
+                    "title": "Anti-Shake Optimization",
+                    "description": "Implemented 10-second anti-duplicate algorithm to solve misread issues in high-speed scenarios."
+                },
+                {
+                    "date": "Jun 2024",
+                    "title": "Project Kickoff",
+                    "description": "Developed the first kart lap counting prototype based on the CF-815 reader."
+                }
+            ]
+        },
+        "techStack": {
+            "title": "Tech Stack",
+            "categories": {
+                "frontend": {
+                    "title": "Frontend",
+                    "items": [
+                        "C# WinForms",
+                        ".NET Framework 3.5",
+                        "GDI+ Graphics"
+                    ]
+                },
+                "hardware": {
+                    "title": "Hardware",
+                    "items": [
+                        "CF-815 SDK",
+                        "USB-Serial (CP210x)",
+                        "UHF RFID Protocol"
+                    ]
+                },
+                "database": {
+                    "title": "Database",
+                    "items": [
+                        "SQLite 3",
+                        "ADO.NET",
+                        "Entity Framework"
+                    ]
+                },
+                "tools": {
+                    "title": "Tools",
+                    "items": [
+                        "Visual Studio 2022",
+                        "Git",
+                        "GitHub"
+                    ]
+                }
+            }
+        },
+        "team": {
+            "title": "Team Members",
+            "members": {
+                "kawada": {
+                    "name": "Ken Chan",
+                    "role": "Project Founder & Core Dev",
+                    "description": "Responsible for overall architecture design, hardware integration, and core algorithm development."
+                },
+                "antigravity": {
+                    "name": "Kawada Technology",
+                    "role": "Tech Consultant & Refactoring",
+                    "description": "Assisting in project refactoring, documentation, and best practice guidance."
+                }
+            }
+        },
+        "openSource": {
+            "title": "100% Open Source",
+            "description": "We believe in the power of open source. All code for GoKart RFID is public on GitHub. Contributions, suggestions, and issue reports are welcome.",
+            "star": "Star on GitHub",
+            "blog": "Read Tech Blog"
+        },
+        "contact": {
+            "title": "Contact Us",
+            "description": "Have questions or want to collaborate? Fill out the form or reach us via the channels below.",
+            "tech": {
+                "title": "Tech Discussion",
+                "desc": "Discuss technical issues via GitHub Issues"
+            },
+            "business": {
+                "title": "Business Cooperation",
+                "email": "admin@kawadaai.studio"
+            },
+            "form": {
+                "name": "Name",
+                "namePlaceholder": "Enter your name",
+                "email": "Email",
+                "emailPlaceholder": "Enter your email address",
+                "message": "Message",
+                "messagePlaceholder": "Enter your message or inquiry...",
+                "submit": "Send Message"
+            }
+        }
+    },
+    "BlogPage": {
+        "metadata": {
+            "title": "Tech Blog | GoKart RFID",
+            "description": "GoKart RFID development logs, technical tutorials, and RFID knowledge sharing."
+        },
+        "emptyState": {
+            "title": "No Blog Posts Yet",
+            "message": "Admin has not published any posts yet. Please check back later!"
+        },
+        "hero": {
+            "badge": "Tech Sharing & Dev Logs",
+            "title": "GoKart RFID Tech Blog",
+            "description": "Sharing RFID development experience, C# programming tips, and project insights."
+        },
+        "featured": {
+            "label": "Featured Post",
+            "views": "Views",
+            "readMore": "Read Full Article →"
+        },
+        "postList": {
+            "read": "Read"
+        },
+        "sidebar": {
+            "categories": "Categories",
+            "tags": "Popular Tags"
+        }
+    },
+    "BlogPost": {
+        "notFound": "Article Not Found",
+        "backToList": "Back to Blog",
+        "views": "Views",
+        "tags": "Tags:",
+        "toc": "Table of Contents",
+        "relatedPosts": "Related Articles"
+    },
+    "BlogCategory": {
+        "title": "Category",
+        "backToBlog": "Back to Blog",
+        "totalPosts": "{count} Posts Total",
+        "empty": "No posts in this category",
+        "allCategories": "All Categories",
+        "read": "Read"
+    },
+    "FeaturesPage": {
+        "metadata": {
+            "title": "Features | GoKart RFID Lap Counter",
+            "description": "Explore all features of GoKart RFID system: automated counting, real-time visualization, audio feedback, data storage, and more."
+        },
+        "hero": {
+            "badge": "Full Features",
+            "title": "Powerful Features, Professional Experience",
+            "description": "GoKart RFID Lap Counter provides a comprehensive automated timing solution for karting events, meticulously designed from hardware recognition to data analysis."
+        },
+        "features": {
+            "items": {
+                "autoLap": {
+                    "title": "Automated Lap Counting",
+                    "description": "High-precision identification based on UHF RFID technology, with a 10-second anti-duplicate algorithm ensuring accuracy for every lap.",
+                    "details": [
+                        "High-Precision UHF RFID (860-960MHz)",
+                        "10s Anti-Shake Algorithm",
+                        "Supports High-Speed Tags (Max 120km/h)",
+                        "Read Range 8-10m"
+                    ]
+                },
+                "visualDashboard": {
+                    "title": "Visual Dashboard",
+                    "description": "1080P screen-optimized interface with color-coded statuses (Running/Final Lap/Finished/Inactive) for instant clarity.",
+                    "details": [
+                        "1080P Full-Screen Layout",
+                        "Real-Time Color Coding (Green/Yellow/Cyan/Red)",
+                        "20 Karts Displayed Simultaneously",
+                        "Dynamic Refresh, No Latency"
+                    ]
+                },
+                "audioFeedback": {
+                    "title": "Audio Feedback",
+                    "description": "Unique sound alerts for every lap, with a victory sound sequence upon completion to enhance the racing experience.",
+                    "details": [
+                        "Unique Sound per Lap Pass",
+                        "Final Lap Warning Sound",
+                        "Race Completion Victory Sound",
+                        "Customizable Audio Files"
+                    ]
+                },
+                "realtimeLog": {
+                    "title": "Real-Time Logs",
+                    "description": "Color-coded event log system clearly distinguishing raw data, lap records, and error messages.",
+                    "details": [
+                        "Real-Time Event Recording",
+                        "Color Categorization (Data/Lap/Error)",
+                        "Millisecond-Precision Timestamps",
+                        "Log Export Functionality"
+                    ]
+                },
+                "sessionControl": {
+                    "title": "Session Control",
+                    "description": "Supports manual start and reset for individual karts to flexibly handle various racing scenarios.",
+                    "details": [
+                        "Individual Start/Reset",
+                        "Batch Operation Support",
+                        "Session State Protection",
+                        "Historical Record Tracing"
+                    ]
+                },
+                "sqliteStorage": {
+                    "title": "SQLite Storage",
+                    "description": "Local database storage for lap times, supporting historical data queries and statistical analysis.",
+                    "details": [
+                        "Lightweight SQLite Database",
+                        "Complete Historical Records",
+                        "Data Export (CSV/Excel)",
+                        "Statistical Analysis Support"
+                    ]
+                }
+            }
+        },
+        "techSpecs": {
+            "title": "Technical Specifications",
+            "items": {
+                "hardware": {
+                    "label": "Hardware",
+                    "value": "CF-815 4-Port UHF RFID Reader"
+                },
+                "frequency": {
+                    "label": "Frequency",
+                    "value": "860-960MHz (Adjustable)"
+                },
+                "range": {
+                    "label": "Read Range",
+                    "value": "8-10m (High-Gain Antenna)"
+                },
+                "capacity": {
+                    "label": "Kart Capacity",
+                    "value": "20 Karts (AA01-AA20)"
+                },
+                "interval": {
+                    "label": "Anti-Duplicate",
+                    "value": "10 Seconds (Configurable)"
+                },
+                "interface": {
+                    "label": "Interface",
+                    "value": "USB-Serial (CP210x)"
+                },
+                "baudRate": {
+                    "label": "Baud Rate",
+                    "value": "115200 bps"
+                },
+                "database": {
+                    "label": "Database",
+                    "value": "SQLite 3"
+                },
+                "framework": {
+                    "label": "Framework",
+                    "value": "C# WinForms + .NET 3.5"
+                },
+                "resolution": {
+                    "label": "Resolution",
+                    "value": "1080P Optimized"
+                }
+            }
+        },
+        "cta": {
+            "title": "Ready to Experience?",
+            "description": "Download GoKart RFID System and bring professional-grade timing to your races.",
+            "download": "Download System",
+            "more": "Learn More"
+        }
+    },
+    "ServicesPage": {
+        "metadata": {
+            "title": "Services & Solutions | GoKart RFID",
+            "description": "Professional RFID custom development, system integration, and technical support services"
+        },
+        "hero": {
+            "badge": "Professional RFID Services",
+            "title": "Tailored RFID Solutions For You",
+            "description": "From requirements analysis to system development, deployment training to after-sales support,<br />providing one-stop RFID technical services to empower your digital business upgrade."
+        },
+        "services": {
+            "title": "Core Services",
+            "items": {
+                "custom": {
+                    "title": "Custom Development",
+                    "description": "Tailor-made RFID timing systems based on your business needs",
+                    "features": [
+                        "Requirements Analysis & Design",
+                        "Custom UI (Brand Color, Logo, Layout)",
+                        "Feature Extension (Multi-track, Points System)",
+                        "DB Migration & Cloud Sync",
+                        "Multi-language Support",
+                        "Mobile/Web App Development"
+                    ],
+                    "price_label": "Starting Price",
+                    "price": "Negotiable",
+                    "cta": "Get Quote"
+                },
+                "license": {
+                    "title": "Software Licensing",
+                    "description": "Purchase full license for the mature GoKart RFID system",
+                    "features": [
+                        "Full Source Code License",
+                        "Tech Docs & Deployment Guide",
+                        "3 Months Free Support",
+                        "Lifetime Updates",
+                        "Commercial Use License",
+                        "Training & On-site Installation"
+                    ],
+                    "price_label": "Starting Price",
+                    "price": "From ¥12,800",
+                    "cta": "Buy Now"
+                },
+                "integration": {
+                    "title": "System Integration",
+                    "description": "Integrate RFID technology into your existing systems",
+                    "features": [
+                        "System Interfacing (ERP, CRM, Screens)",
+                        "API Development",
+                        "Database Design & Optimization",
+                        "Real-time Data Push",
+                        "Cloud Deployment (AWS/Aliyun)",
+                        "Performance Tuning"
+                    ],
+                    "price_label": "Starting Price",
+                    "price": "From ¥8,000",
+                    "cta": "Consult"
+                },
+                "training": {
+                    "title": "Technical Training",
+                    "description": "RFID development training and technical consulting",
+                    "features": [
+                        "UHF RFID Principles",
+                        "CF-815 SDK Development",
+                        "C# WinForms Practice",
+                        "Anti-shake Algorithm Design",
+                        "1-on-1 Mentoring",
+                        "Complete Learning Materials"
+                    ],
+                    "price_label": "Starting Price",
+                    "price": "¥3,800/Day",
+                    "cta": "Book Training"
+                }
+            }
+        },
+        "solutions": {
+            "title": "Industry Solutions",
+            "items": {
+                "karting": {
+                    "title": "Karting Timing",
+                    "industry": "Entertainment",
+                    "description": "Automated lap timing for karting tracks, supporting 20 karts, real-time leaderboards.",
+                    "tags": [
+                        "Deployed",
+                        "Mature"
+                    ]
+                },
+                "marathon": {
+                    "title": "Marathon Management",
+                    "industry": "Sports",
+                    "description": "Large-scale running event timing, supporting thousands of participants, split timing & results.",
+                    "tags": [
+                        "Customizable"
+                    ]
+                },
+                "logistics": {
+                    "title": "Warehouse Logistics",
+                    "industry": "Logistics",
+                    "description": "RFID cargo tracking, real-time inventory, automated check-in/out records.",
+                    "tags": [
+                        "Customizable"
+                    ]
+                },
+                "parking": {
+                    "title": "Smart Parking",
+                    "industry": "Property Mgmt",
+                    "description": "Auto vehicle identification & billing, frictionless entry/exit, cloud data management.",
+                    "tags": [
+                        "Customizable"
+                    ]
+                },
+                "exhibition": {
+                    "title": "Exhibition Check-in",
+                    "industry": "Events",
+                    "description": "Fast check-in for attendees, real-time stats, data export & analysis.",
+                    "tags": [
+                        "Customizable"
+                    ]
+                },
+                "asset": {
+                    "title": "Asset Management",
+                    "industry": "Enterprise",
+                    "description": "RFID tagging for fixed assets, anti-theft tracking, 90% efficiency improvement.",
+                    "tags": [
+                        "Customizable"
+                    ]
+                }
+            }
+        },
+        "cases": {
+            "title": "Success Stories",
+            "items": [
+                {
+                    "client": "Malaysia Karting Track",
+                    "project": "GoKart RFID System",
+                    "result": "Replaced manual timing, 100% accuracy, 60% cost reduction",
+                    "duration": "2 Weeks Delivery"
+                },
+                {
+                    "client": "Malaysia Sports Bureau",
+                    "project": "Marathon RFID System",
+                    "result": "Supported 5000 runners simultaneously, 0 errors",
+                    "duration": "1 Month Delivery"
+                },
+                {
+                    "client": "Malaysia Logistics Company",
+                    "project": "RFID Warehouse System",
+                    "result": "Inventory time reduced from 2 days to 2 hours",
+                    "duration": "3 Months Delivery"
+                }
+            ]
+        },
+        "why": {
+            "title": "Why Choose Us",
+            "items": {
+                "fast": {
+                    "title": "Fast Delivery",
+                    "description": "Average 2-4 weeks dev & deployment"
+                },
+                "custom": {
+                    "title": "Precise Customization",
+                    "description": "100% meeting your business needs"
+                },
+                "cost": {
+                    "title": "High Cost-Performance",
+                    "description": "30%-50% lower than competitors"
+                },
+                "support": {
+                    "title": "After-sales Guarantee",
+                    "description": "1 year free maintenance, lifetime support"
+                }
+            }
+        },
+        "contact": {
+            "title": "Ready to Start?",
+            "description": "Contact us now for free technical consultation and project quotation",
+            "emailBtn": "Email Consulting",
+            "phoneBtn": "Phone: +86-138-0013-8000",
+            "wechat": "WeChat",
+            "hours": "Hours",
+            "hoursValue": "Mon-Fri 9:00-18:00"
+        }
+    },
+    "Footer": {
+        "tagline": "High-Precision Karting Lap Counter System",
+        "copyright": "Kawada GoKart RFID",
+        "adminPanel": "Admin Panel",
+        "resourcesTitle": "Resources",
+        "techStackTitle": "Tech Stack",
+        "links": {
+            "features": "Features",
+            "blog": "Tech Blog",
+            "about": "About",
+            "github": "GitHub Repository",
+            "download": "Download Latest"
+        }
+    }
+}

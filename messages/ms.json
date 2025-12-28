@@ -1,0 +1,582 @@
+{
+    "Navigation": {
+        "home": "Laman Utama",
+        "services": "Perkhidmatan",
+        "features": "Ciri-ciri",
+        "blog": "Blog",
+        "about": "Tentang Kami",
+        "brand": "Kawada GoKart RFID"
+    },
+    "HomePage": {
+        "title": "Kawada GoKart RFID",
+        "subtitle": "Sistem Pengira Pusingan",
+        "badge": "Sistem Perlumbaan RFID Ketepatan Tinggi",
+        "description": "Sistem pengira pusingan berketepatan tinggi berdasarkan <primary>Pembaca CF-815 4-Port UHF RFID</primary> (860-960MHz, jarak 8-10m). Membawa <secondary>Anti-Gegar 10s</secondary>, <secondary>Visualisasi Masa Nyata</secondary>, dan <secondary>Maklum Balas Audio</secondary> automatik ke acara karting.",
+        "getQuote": "Dapatkan Penyelesaian",
+        "viewDemo": "Lihat Demo Ciri",
+        "viewGithub": "Lihat Kod Sumber GitHub",
+        "featuresTitle": "Ciri Utama",
+        "featuresSubtitle": "Sistem RFID pintar direka untuk acara karting berkelajuan tinggi",
+        "stats": {
+            "posts": "Artikel Diterbitkan",
+            "views": "Jumlah Lihat",
+            "karts": "Kart Disokong",
+            "baudRate": "Kadar Baud (bps)"
+        },
+        "cta": {
+            "title": "Bersedia untuk Mula?",
+            "description": "Muat turun dan gunakan sistem GoKart RFID sekarang untuk membawa pengalaman masa pusingan profesional ke perlumbaan anda",
+            "download": "Muat Turun Versi Terkini",
+            "blog": "Baca Blog Teknikal"
+        },
+        "features": {
+            "autoLap": {
+                "title": "Pengira Pusingan Auto",
+                "description": "Pengenalan ketepatan tinggi berasaskan UHF RFID, dengan perlindungan anti-duplikasi 10 saat memastikan ketepatan 100%."
+            },
+            "visualDashboard": {
+                "title": "Papan Pemuka Visual",
+                "description": "Antara muka dioptimumkan skrin penuh 1080P dengan status berkod warna (Sedang Lari/Pusingan Akhir/Selesai/Tidak Aktif)."
+            },
+            "audioFeedback": {
+                "title": "Maklum Balas Audio",
+                "description": "Nada unik untuk setiap pusingan dan urutan bunyi kemenangan apabila selesai untuk meningkatkan pengalaman perlumbaan."
+            },
+            "realtimeLog": {
+                "title": "Log Masa Nyata",
+                "description": "Sistem log acara berkod warna membezakan data mentah, rekod pusingan, dan ralat."
+            },
+            "sessionControl": {
+                "title": "Kawalan Sesi",
+                "description": "Menyokong permulaan/set semula manual untuk setiap kart secara individu untuk menangani pelbagai senario perlumbaan."
+            },
+            "sqliteStorage": {
+                "title": "Storan SQLite",
+                "description": "Storan pangkalan data tempatan untuk masa pusingan, menyokong pertanyaan sejarah dan analisis statistik."
+            }
+        },
+        "preview": {
+            "windowTitle": "GoKart RFID - Pengira Pusingan",
+            "logTitle": "Log Acara Masa Nyata",
+            "kartsSupported": "Kart Disokong",
+            "antiShakeInterval": "Anti-Gegar",
+            "logs": {
+                "finished": "Selesai",
+                "finalLap": "Pusingan Akhir",
+                "finishedAll": "Selesai Semua Pusingan!"
+            }
+        }
+    },
+    "AboutPage": {
+        "metadata": {
+            "title": "Tentang Kami | GoKart RFID",
+            "description": "Ketahui tentang latar belakang pembangunan, seni bina teknikal, dan pasukan sistem Pengira Pusingan GoKart RFID."
+        },
+        "hero": {
+            "badge": "Tentang Kami",
+            "title": "Penyedia Penyelesaian RFID Profesional",
+            "description": "Kami pakar dalam aplikasi komersial dan pembangunan khusus teknologi RFID, menawarkan penyelesaian sehenti dari perundingan dan pembangunan hingga penggunaan dan penyelenggaraan untuk pelanggan merentasi pelbagai industri."
+        },
+        "projectStory": {
+            "title": "Asal Usul Projek",
+            "content": {
+                "p1": "Dalam acara karting, masa manual tradisional terdedah kepada kesilapan dan tidak cekap. Untuk menyelesaikannya, kami membangunkan sistem masa automatik ini berdasarkan <primary>Pembaca UHF RFID CF-815</primary>.",
+                "p2": "Sistem ini secara automatik mengenal pasti kart yang melintasi garisan penamat melalui teknologi RFID, digabungkan dengan <secondary>algoritma anti-gegar 10 saat</secondary> yang direka dengan teliti, memastikan ketepatan untuk setiap pusingan walaupun pada kelajuan tinggi.",
+                "p3": "Selepas beberapa lelaran dan ujian lapangan, sistem ini menyokong 20 kart serentak dengan stabil, menyediakan visualisasi masa nyata, maklum balas audio, dan rakaman data lengkap."
+            },
+            "stats": {
+                "karts": {
+                    "value": "20",
+                    "label": "Kart Disokong"
+                },
+                "range": {
+                    "value": "8-10m",
+                    "label": "Jarak Bacaan"
+                },
+                "interval": {
+                    "value": "10s",
+                    "label": "Anti-Gegar"
+                },
+                "ui": {
+                    "value": "1080P",
+                    "label": "UI Dioptimumkan"
+                }
+            }
+        },
+        "timeline": {
+            "title": "Garis Masa Pembangunan",
+            "items": [
+                {
+                    "date": "Dis 27, 2024",
+                    "title": "Pemfaktoran Semula Projek",
+                    "description": "Pemfaktoran semula komprehensif kod asal, mewujudkan seni bina dan sistem konfigurasi yang jelas."
+                },
+                {
+                    "date": "Dis 25, 2024",
+                    "title": "Penaiktarafan SDK",
+                    "description": "Menaik taraf SDK CF-815 ke versi terkini, mengoptimumkan protokol komunikasi untuk kestabilan dan kelajuan tindak balas yang lebih baik."
+                },
+                {
+                    "date": "Okt 2024",
+                    "title": "Penyelesaian Ciri",
+                    "description": "Menambah maklum balas audio, storan SQLite, dan fungsi pengurusan sesi."
+                },
+                {
+                    "date": "Ogo 2024",
+                    "title": "Pengoptimuman Anti-Gegar",
+                    "description": "Melaksanakan algoritma anti-pendua 10 saat untuk menyelesaikan masalah salah baca dalam senario kelajuan tinggi."
+                },
+                {
+                    "date": "Jun 2024",
+                    "title": "Permulaan Projek",
+                    "description": "Membangunkan prototaip pengiraan pusingan kart pertama berdasarkan pembaca CF-815."
+                }
+            ]
+        },
+        "techStack": {
+            "title": "Tindanya Teknologi",
+            "categories": {
+                "frontend": {
+                    "title": "Frontend",
+                    "items": [
+                        "C# WinForms",
+                        ".NET Framework 3.5",
+                        "GDI+ Graphics"
+                    ]
+                },
+                "hardware": {
+                    "title": "Perkakasan",
+                    "items": [
+                        "CF-815 SDK",
+                        "USB-Serial (CP210x)",
+                        "Protokol UHF RFID"
+                    ]
+                },
+                "database": {
+                    "title": "Pangkalan Data",
+                    "items": [
+                        "SQLite 3",
+                        "ADO.NET",
+                        "Entity Framework"
+                    ]
+                },
+                "tools": {
+                    "title": "Alat",
+                    "items": [
+                        "Visual Studio 2022",
+                        "Git",
+                        "GitHub"
+                    ]
+                }
+            }
+        },
+        "team": {
+            "title": "Ahli Pasukan",
+            "members": {
+                "kawada": {
+                    "name": "Ken Chan",
+                    "role": "Pengasas Projek & Pembangun Utama",
+                    "description": "Bertanggungjawab untuk reka bentuk seni bina keseluruhan, integrasi perkakasan, dan pembangunan algoritma teras."
+                },
+                "antigravity": {
+                    "name": "Kawada Technology",
+                    "role": "Perunding Teknikal & Pemfaktoran Semula",
+                    "description": "Membantu dalam pemfaktoran semula projek, penulisan dokumentasi, dan panduan amalan terbaik."
+                }
+            }
+        },
+        "openSource": {
+            "title": "100% Sumber Terbuka",
+            "description": "Kami percaya pada kekuatan sumber terbuka. Semua kod untuk GoKart RFID adalah awam di GitHub. Sumbingan, cadangan, dan laporan isu dialu-alukan.",
+            "star": "Bintang di GitHub",
+            "blog": "Baca Blog Teknikal"
+        },
+        "contact": {
+            "title": "Hubungi Kami",
+            "description": "Ada soalan atau ingin bekerjasama? Isi borang atau hubungi kami melalui saluran di bawah.",
+            "tech": {
+                "title": "Perbincangan Teknikal",
+                "desc": "Bincangkan isu teknikal melalui Isu GitHub"
+            },
+            "business": {
+                "title": "Kerjasama Perniagaan",
+                "email": "admin@kawadaai.studio"
+            },
+            "form": {
+                "name": "Nama",
+                "namePlaceholder": "Masukkan nama anda",
+                "email": "E-mel",
+                "emailPlaceholder": "Masukkan alamat e-mel anda",
+                "message": "Mesej",
+                "messagePlaceholder": "Masukkan mesej atau pertanyaan anda...",
+                "submit": "Hantar Mesej"
+            }
+        }
+    },
+    "BlogPage": {
+        "metadata": {
+            "title": "Blog Teknikal | GoKart RFID",
+            "description": "Log pembangunan GoKart RFID, tutorial teknikal, dan perkongsian pengetahuan RFID."
+        },
+        "emptyState": {
+            "title": "Tiada Catatan Blog Lagi",
+            "message": "Pentadbir belum menerbitkan sebarang catatan lagi. Sila semak semula kemudian!"
+        },
+        "hero": {
+            "badge": "Perkongsian Teknikal & Log Pembangunan",
+            "title": "Blog Teknikal GoKart RFID",
+            "description": "Berkongsi pengalaman pembangunan RFID, petua pengaturcaraan C#, dan pandangan projek."
+        },
+        "featured": {
+            "label": "Catatan Pilihan",
+            "views": "Lihat",
+            "readMore": "Baca Artikel Penuh →"
+        },
+        "postList": {
+            "read": "Baca"
+        },
+        "sidebar": {
+            "categories": "Kategori",
+            "tags": "Tag Popular"
+        }
+    },
+    "BlogPost": {
+        "notFound": "Artikel Tidak Ditemui",
+        "backToList": "Kembali ke Blog",
+        "views": "Lihat",
+        "tags": "Tag:",
+        "toc": "Jadual Kandungan",
+        "relatedPosts": "Artikel Berkaitan"
+    },
+    "BlogCategory": {
+        "title": "Kategori",
+        "backToBlog": "Kembali ke Blog",
+        "totalPosts": "Jumlah {count} Artikel",
+        "empty": "Tiada artikel dalam kategori ini",
+        "allCategories": "Semua Kategori",
+        "read": "Baca"
+    },
+    "FeaturesPage": {
+        "metadata": {
+            "title": "Ciri-ciri | Pengira Pusingan GoKart RFID",
+            "description": "Terokai semua ciri sistem GoKart RFID: pengiraan automatik, visualisasi masa nyata, maklum balas audio, penyimpanan data, dan banyak lagi."
+        },
+        "hero": {
+            "badge": "Ciri Penuh",
+            "title": "Ciri Hebat, Pengalaman Profesional",
+            "description": "Sistem Pengira Pusingan GoKart RFID menyediakan penyelesaian masa automatik yang komprehensif untuk acara karting, direka dengan teliti dari pengecaman perkakasan hingga analisis data."
+        },
+        "features": {
+            "items": {
+                "autoLap": {
+                    "title": "Pengiraan Pusingan Automatik",
+                    "description": "Pengecaman ketepatan tinggi berasaskan teknologi UHF RFID, dengan algoritma anti-pendua 10 saat memastikan ketepatan untuk setiap pusingan.",
+                    "details": [
+                        "UHF RFID Ketepatan Tinggi (860-960MHz)",
+                        "Algoritma Anti-Gegar 10s",
+                        "Menyokong Tag Berkelajuan Tinggi (Maks 120km/j)",
+                        "Jarak Bacaan 8-10m"
+                    ]
+                },
+                "visualDashboard": {
+                    "title": "Papan Pemuka Visual",
+                    "description": "Antara muka dioptimumkan skrin 1080P dengan status berkod warna (Berjalan/Pusingan Akhir/Selesai/Tidak Aktif) untuk kejelasan segera.",
+                    "details": [
+                        "Susun Atur Skrin Penuh 1080P",
+                        "Pengekodan Warna Masa Nyata (Hijau/Kuning/Cyan/Merah)",
+                        "20 Kart Dipaparkan Serentak",
+                        "Segar Semula Dinamik, Tiada Latensi"
+                    ]
+                },
+                "audioFeedback": {
+                    "title": "Maklum Balas Audio",
+                    "description": "Makluman bunyi unik untuk setiap pusingan, dengan urutan bunyi kemenangan setelah selesai untuk meningkatkan pengalaman perlumbaan.",
+                    "details": [
+                        "Bunyi Unik setiap Laluan Pusingan",
+                        "Bunyi Amaran Pusingan Akhir",
+                        "Bunyi Kemenangan Tamat Perlumbaan",
+                        "Fail Audio Boleh Disesuaikan"
+                    ]
+                },
+                "realtimeLog": {
+                    "title": "Log Masa Nyata",
+                    "description": "Sistem log acara berkod warna yang membezakan data mentah, rekod pusingan, dan mesej ralat dengan jelas.",
+                    "details": [
+                        "Rakaman Acara Masa Nyata",
+                        "Pengkategorian Warna (Data/Pusingan/Ralat)",
+                        "Cap Masa Ketepatan Milisaat",
+                        "Fungsi Eksport Log"
+                    ]
+                },
+                "sessionControl": {
+                    "title": "Kawalan Sesi",
+                    "description": "Menyokong permulaan dan tetapan semula manual untuk setiap kart untuk menangani pelbagai senario perlumbaan dengan fleksibel.",
+                    "details": [
+                        "Mula/Tetap Semula Individu",
+                        "Sokongan Operasi Berkelompok",
+                        "Perlindungan Status Sesi",
+                        "Penjejakan Rekod Sejarah"
+                    ]
+                },
+                "sqliteStorage": {
+                    "title": "Storan SQLite",
+                    "description": "Storan pangkalan data tempatan untuk masa pusingan, menyokong pertanyaan data sejarah dan analisis statistik.",
+                    "details": [
+                        "Pangkalan Data SQLite Ringan",
+                        "Rekod Sejarah Lengkap",
+                        "Eksport Data (CSV/Excel)",
+                        "Sokongan Analisis Statistik"
+                    ]
+                }
+            }
+        },
+        "techSpecs": {
+            "title": "Spesifikasi Teknikal",
+            "items": {
+                "hardware": {
+                    "label": "Perkakasan",
+                    "value": "Pembaca UHF RFID 4-Port CF-815"
+                },
+                "frequency": {
+                    "label": "Frekuensi",
+                    "value": "860-960MHz (Boleh Laras)"
+                },
+                "range": {
+                    "label": "Jarak Bacaan",
+                    "value": "8-10m (Antena Gandaan Tinggi)"
+                },
+                "capacity": {
+                    "label": "Kapasiti Kart",
+                    "value": "20 Kart (AA01-AA20)"
+                },
+                "interval": {
+                    "label": "Anti-Pendua",
+                    "value": "10 Saat (Boleh Dikonfigurasi)"
+                },
+                "interface": {
+                    "label": "Antara Muka",
+                    "value": "USB-Serial (CP210x)"
+                },
+                "baudRate": {
+                    "label": "Kadar Baud",
+                    "value": "115200 bps"
+                },
+                "database": {
+                    "label": "Pangkalan Data",
+                    "value": "SQLite 3"
+                },
+                "framework": {
+                    "label": "Rangka Kerja",
+                    "value": "C# WinForms + .NET 3.5"
+                },
+                "resolution": {
+                    "label": "Resolusi",
+                    "value": "1080P Dioptimumkan"
+                }
+            }
+        },
+        "cta": {
+            "title": "Bersedia untuk Mengalami?",
+            "description": "Muat turun Sistem GoKart RFID dan bawa masa gred profesional ke perlumbaan anda.",
+            "download": "Muat Turun Sistem",
+            "more": "Ketahui Lebih Lanjut"
+        }
+    },
+    "ServicesPage": {
+        "metadata": {
+            "title": "Perkhidmatan & Penyelesaian | GoKart RFID",
+            "description": "Perkhidmatan pembangunan tersuai, integrasi sistem, dan sokongan teknikal RFID profesional"
+        },
+        "hero": {
+            "badge": "Perkhidmatan RFID Profesional",
+            "title": "Penyelesaian RFID Yang Disesuaikan Untuk Anda",
+            "description": "Dari analisis keperluan hingga pembangunan sistem, latihan penggunaan hingga sokongan selepas jualan,<br />menyediakan perkhidmatan teknikal RFID sehenti untuk memperkasakan peningkatan digital perniagaan anda."
+        },
+        "services": {
+            "title": "Perkhidmatan Teras",
+            "items": {
+                "custom": {
+                    "title": "Pembangunan Tersuai",
+                    "description": "Sistem masa RFID yang disesuaikan berdasarkan keperluan perniagaan anda",
+                    "features": [
+                        "Analisis Keperluan & Reka Bentuk",
+                        "UI Tersuai (Warna Jenama, Logo, Susun Atur)",
+                        "Pelusan Ciri (Pelbagai Trek, Sistem Mata)",
+                        "Migrasi DB & Penyegerakan Awan",
+                        "Sokongan Pelbagai Bahasa",
+                        "Pembangunan Aplikasi Mudah Alih/Web"
+                    ],
+                    "price_label": "Harga Permulaan",
+                    "price": "Boleh Runding",
+                    "cta": "Dapatkan Sebut Harga"
+                },
+                "license": {
+                    "title": "Pelesenan Perisian",
+                    "description": "Beli lesen penuh untuk sistem GoKart RFID yang matang",
+                    "features": [
+                        "Lesen Kod Sumber Penuh",
+                        "Dokumen Teknikal & Panduan Pemasangan",
+                        "Sokongan Percuma 3 Bulan",
+                        "Kemas Kini Seumur Hidup",
+                        "Lesen Penggunaan Komersial",
+                        "Latihan & Pemasangan Di Lokasi"
+                    ],
+                    "price_label": "Harga Permulaan",
+                    "price": "Dari ¥12,800",
+                    "cta": "Beli Sekarang"
+                },
+                "integration": {
+                    "title": "Integrasi Sistem",
+                    "description": "Integrasikan teknologi RFID ke dalam sistem sedia ada anda",
+                    "features": [
+                        "Antara Muka Sistem (ERP, CRM, Skrin)",
+                        "Pembangunan API",
+                        "Reka Bentuk & Pengoptimuman Pangkalan Data",
+                        "Penolakan Data Masa Nyata",
+                        "Penyebaran Awan (AWS/Aliyun)",
+                        "Penalayaan Prestasi"
+                    ],
+                    "price_label": "Harga Permulaan",
+                    "price": "Dari ¥8,000",
+                    "cta": "Rujuk"
+                },
+                "training": {
+                    "title": "Latihan Teknikal",
+                    "description": "Latihan pembangunan RFID dan perundingan teknikal",
+                    "features": [
+                        "Prinsip UHF RFID",
+                        "Pembangunan SDK CF-815",
+                        "Amalan C# WinForms",
+                        "Reka Bentuk Algoritma Anti-gegar",
+                        "Bimbingan 1-dengan-1",
+                        "Bahan Pembelajaran Lengkap"
+                    ],
+                    "price_label": "Harga Permulaan",
+                    "price": "¥3,800/Hari",
+                    "cta": "Tempah Latihan"
+                }
+            }
+        },
+        "solutions": {
+            "title": "Penyelesaian Industri",
+            "items": {
+                "karting": {
+                    "title": "Masa Karting",
+                    "industry": "Hiburan",
+                    "description": "Masa pusingan automatik untuk trek kart, menyokong 20 kart, papan pendahulu masa nyata.",
+                    "tags": [
+                        "Disebarkan",
+                        "Matang"
+                    ]
+                },
+                "marathon": {
+                    "title": "Pengurusan Maraton",
+                    "industry": "Sukan",
+                    "description": "Masa acara larian berskala besar, menyokong ribuan peserta, masa pecahan & keputusan.",
+                    "tags": [
+                        "Boleh Disesuaikan"
+                    ]
+                },
+                "logistics": {
+                    "title": "Logistik Gudang",
+                    "industry": "Logistik",
+                    "description": "Penjejakan kargo RFID, inventori masa nyata, rekod masuk/keluar automatik.",
+                    "tags": [
+                        "Boleh Disesuaikan"
+                    ]
+                },
+                "parking": {
+                    "title": "Parkir Pintar",
+                    "industry": "Pengurusan Hartanah",
+                    "description": "Pengenalan & pengebilan kenderaan automatik, masuk/keluar tanpa geseran, pengurusan data awan.",
+                    "tags": [
+                        "Boleh Disesuaikan"
+                    ]
+                },
+                "exhibition": {
+                    "title": "Daftar Masuk Pameran",
+                    "industry": "Acara",
+                    "description": "Daftar masuk pantas untuk peserta, statistik masa nyata, eksport & analisis data.",
+                    "tags": [
+                        "Boleh Disesuaikan"
+                    ]
+                },
+                "asset": {
+                    "title": "Pengurusan Aset",
+                    "industry": "Perusahaan",
+                    "description": "Penandaan RFID untuk aset tetap, penjejakan anti-kecurian, peningkatan kecekapan 90%.",
+                    "tags": [
+                        "Boleh Disesuaikan"
+                    ]
+                }
+            }
+        },
+        "cases": {
+            "title": "Kisah Kejayaan",
+            "items": [
+                {
+                    "client": "Trek Kart Malaysia",
+                    "project": "Sistem GoKart RFID",
+                    "result": "Menggantikan masa manual, ketepatan 100%, pengurangan kos 60%",
+                    "duration": "Penghantaran 2 Minggu"
+                },
+                {
+                    "client": "Biro Sukan Malaysia",
+                    "project": "Sistem RFID Maraton",
+                    "result": "Menyokong 5000 pelari serentak, 0 ralat",
+                    "duration": "Penghantaran 1 Bulan"
+                },
+                {
+                    "client": "Syarikat Logistik Malaysia",
+                    "project": "Sistem Gudang RFID",
+                    "result": "Masa inventori dikurangkan dari 2 hari kepada 2 jam",
+                    "duration": "Penghantaran 3 Bulan"
+                }
+            ]
+        },
+        "why": {
+            "title": "Kenapa Pilih Kami",
+            "items": {
+                "fast": {
+                    "title": "Penghantaran Pantas",
+                    "description": "Purata 2-4 minggu pembangunan & penggunaan"
+                },
+                "custom": {
+                    "title": "Penyesuaian Tepat",
+                    "description": "100% memenuhi keperluan perniagaan anda"
+                },
+                "cost": {
+                    "title": "Kos-Prestasi Tinggi",
+                    "description": "30%-50% lebih rendah daripada pesaing"
+                },
+                "support": {
+                    "title": "Jaminan Selepas Jualan",
+                    "description": "Penyelenggaraan percuma 1 tahun, sokongan seumur hidup"
+                }
+            }
+        },
+        "contact": {
+            "title": "Bersedia untuk Mula?",
+            "description": "Hubungi kami sekarang untuk perundingan teknikal percuma dan sebut harga projek",
+            "emailBtn": "Perundingan E-mel",
+            "phoneBtn": "Telefon: +86-138-0013-8000",
+            "wechat": "WeChat",
+            "hours": "Waktu Kerja",
+            "hoursValue": "Isnin-Jumaat 9:00-18:00"
+        }
+    },
+    "Footer": {
+        "tagline": "Sistem Pengira Pusingan Karting Ketepatan Tinggi",
+        "copyright": "Kawada GoKart RFID",
+        "adminPanel": "Panel Pentadbir",
+        "resourcesTitle": "Sumber",
+        "techStackTitle": "Tindanya Teknologi",
+        "links": {
+            "features": "Ciri-ciri",
+            "blog": "Blog Teknikal",
+            "about": "Tentang",
+            "github": "Repositori GitHub",
+            "download": "Muat Turun Terkini"
+        }
+    }
+}
