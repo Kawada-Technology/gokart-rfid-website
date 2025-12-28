@@ -3,6 +3,9 @@ import prisma from '@/lib/prisma';
 import { Metadata } from 'next';
 import { getTranslations, getLocale } from 'next-intl/server';
 
+// Force dynamic rendering - don't try to pre-render at build time
+export const dynamic = 'force-dynamic';
+
 interface PageProps {
     params: Promise<{ name: string }>;
 }

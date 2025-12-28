@@ -13,14 +13,9 @@ interface PageProps {
     params: Promise<{ slug: string }>;
 }
 
-// Generate static params for published posts (optional, can be removed for ISR)
-export async function generateStaticParams() {
-    const posts = await prisma.blogPost.findMany({
-        where: { status: 'published' },
-        select: { slug: true },
-    });
-    return posts.map((post: { slug: string }) => ({ slug: post.slug }));
-}
+// Force dynamic rendering - don't try to pre-render at build time
+export const dynamic = 'force-dynamic';
+
 
 // Generate metadata
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

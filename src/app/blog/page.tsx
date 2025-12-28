@@ -4,6 +4,9 @@ import prisma from '@/lib/prisma';
 import { getTranslations, getLocale } from 'next-intl/server';
 import { getSeoMetadata } from '@/lib/seo';
 
+// Force dynamic rendering - don't try to pre-render at build time
+export const dynamic = 'force-dynamic';
+
 export async function generateMetadata(): Promise<Metadata> {
     const t = await getTranslations('BlogPage.metadata');
     return getSeoMetadata('blog', {
