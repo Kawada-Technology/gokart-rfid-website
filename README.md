@@ -121,3 +121,7 @@ Ken Chan - [Kawada Technology](https://kawadaai.studio)
 
  **????(GitHub Pages)**:  
 [https://<YOUR_GITHUB_USERNAME>.github.io/gokart-rfid-website](https://<YOUR_GITHUB_USERNAME>.github.io/gokart-rfid-website)
+---  
+
+ **????(GitHub Pages)**:  
+[https://<kawada-technology.github.io/gokart-rfid-website](https://kawada-technology.github.io/gokart-rfid-website)
