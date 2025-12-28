@@ -91,7 +91,7 @@ npm run dev
 
 ### 一键部署 / One‑Click Deploy
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/YOUR_USERNAME/gokart-rfid-website)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Kawada-Technology/gokart-rfid-website)
 
 **Live site:** https://kawada-gokart-rfid.vercel.app/
 
@@ -117,15 +117,3 @@ Ken Chan - [Kawada Technology](https://kawadaai.studio)
 ---
 
 ⭐ 如果这个项目对您有帮助，请给个 Star！
----  
-
- **????(GitHub Pages)**:  
-[https://<YOUR_GITHUB_USERNAME>.github.io/gokart-rfid-website](https://<YOUR_GITHUB_USERNAME>.github.io/gokart-rfid-website)
----  
-
- **????(GitHub Pages)**:  
-[https://<kawada-technology.github.io/gokart-rfid-website](https://kawada-technology.github.io/gokart-rfid-website)
----  
-
- **????(GitHub Pages)**:  
-[https://<kawada-technology.github.io/gokart-rfid-website](https://kawada-technology.github.io/gokart-rfid-website)

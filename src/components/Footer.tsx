@@ -14,8 +14,8 @@ export default function Footer() {
             { label: t('links.about'), href: '/about' },
         ],
         resources: [
-            { label: t('links.github'), href: 'https://github.com/yuji4091/GoKartRFID', external: true },
-            { label: t('links.download'), href: 'https://github.com/yuji4091/GoKartRFID/releases', external: true },
+            { label: t('links.github'), href: 'https://github.com/Kawada-Technology/gokart-rfid-website', external: true },
+            { label: t('links.download'), href: 'https://github.com/Kawada-Technology/gokart-rfid-website/releases', external: true },
         ],
         tech: [
             { label: 'C# WinForms', href: '/blog/tag/csharp' },
@@ -77,7 +77,7 @@ export default function Footer() {
                         </div>
                         <div className="flex gap-3 mt-3">
                             <a
-                                href="https://github.com/yuji4091/GoKartRFID"
+                                href="https://github.com/Kawada-Technology/gokart-rfid-website"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-8 h-8 rounded-lg bg-muted hover:bg-primary/20 hover:text-primary transition-colors flex items-center justify-center"

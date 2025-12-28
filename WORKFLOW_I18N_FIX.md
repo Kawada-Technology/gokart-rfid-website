@@ -1,5 +1,8 @@
 ---
 description: GoKart RFID 网站多语言问题排查与修复
+
+## 新域名
+https://kawada-gokart-rfid.vercel.app/
 ---
 
 # 当前状态
@@ -123,3 +126,7 @@ https://next-intl.dev/docs/environments/server-client-components
 - Dev server 正在运行，可能需要重启
 
 **关键提示**: 不要随意修改 UI，专注解决翻译功能。
+
+## 新规则 / New Rule
+
+让其他 AI 使用 Chrome 已是最新版本：版本 145.0.7587.5（正式版本）dev（64 位）

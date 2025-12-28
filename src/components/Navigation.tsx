@@ -74,7 +74,7 @@ export default function Navigation() {
                     {/* GitHub + Theme Toggle */}
                     <div className="hidden md:flex items-center gap-3">
                         <a
-                            href="https://github.com/yuji4091/GoKartRFID"
+                            href="https://github.com/Kawada-Technology/gokart-rfid-website"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="p-2 text-muted-foreground hover:text-foreground transition-colors"

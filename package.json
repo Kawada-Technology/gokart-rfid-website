@@ -2,6 +2,10 @@
   "name": "gokart-rfid-website",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kawada-Technology/gokart-rfid-website.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -37,6 +41,7 @@
     "dotenv": "^17.2.3",
     "eslint": "^9",
     "eslint-config-next": "16.1.1",
+    "netlify-cli": "^23.13.0",
     "prisma": "^5.22.0",
     "tailwindcss": "^4",
     "typescript": "^5"
