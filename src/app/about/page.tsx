@@ -172,7 +172,7 @@ export default async function AboutPage() {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <a
-                                href="https://github.com/yuji4091/GoKartRFID"
+                                href="https://github.com/Kawada-Technology/gokart-rfid-website"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="btn-primary flex items-center justify-center gap-2"

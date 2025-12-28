@@ -156,7 +156,7 @@ export default async function FeaturesPage() {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <a
-                                href="https://github.com/yuji4091/GoKartRFID/releases"
+                                href="https://github.com/Kawada-Technology/gokart-rfid-website/releases"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="btn-primary"

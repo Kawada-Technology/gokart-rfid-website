@@ -8,6 +8,8 @@ export default getRequestConfig(async () => {
     // Get locale from cookie
     const cookieStore = await cookies();
     const cookieLocale = cookieStore.get('locale')?.value;
+    console.log('--- i18n/request.ts ---');
+    console.log('Cookie locale:', cookieLocale);
 
     // Validate locale, fallback to default if invalid or missing
     const locale = (cookieLocale && locales.includes(cookieLocale)) ? cookieLocale : defaultLocale;
