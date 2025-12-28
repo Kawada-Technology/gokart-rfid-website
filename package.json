@@ -30,7 +30,7 @@
     "@prisma/client": "^5.22.0",
     "@tailwindcss/postcss": "^4",
     "@types/markdown-it": "^14.1.2",
-    "@types/node": "^20",
+    "@types/node": "^24",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "dotenv": "^17.2.3",
