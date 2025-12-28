@@ -1,0 +1,9 @@
+{
+    "buildCommand": "next build",
+    "installCommand": "npm install",
+    "framework": "nextjs",
+    "ignoreCommand": "echo 'Ignoring build step check' && exit 0",
+    "env": {
+        "NEXT_Telemetry_DISABLED": "1"
+    }
+}
